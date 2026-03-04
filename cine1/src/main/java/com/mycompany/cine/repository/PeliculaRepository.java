@@ -1,9 +1,0 @@
-package com.mycompany.cine.repository;
-import com.mycompany.cine.model.Pelicula;
-import org.springframework.data.jpa.repository.JpaRepository;
-import java.util.List;
-
-public interface PeliculaRepository extends JpaRepository<Pelicula, Integer> {
-    List<Pelicula> findByEstadoTrue();
-    List<Pelicula> findByNombreContainingIgnoreCaseAndEstadoTrue(String nombre);
-}
