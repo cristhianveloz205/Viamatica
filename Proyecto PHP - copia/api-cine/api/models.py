@@ -12,7 +12,7 @@ class Pelicula(models.Model):
     id_pelicula = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=255)
     duracion = models.IntegerField(help_text="Duración en minutos")
-    estado_logico = models.BooleanField(default=True) # Para las eliminaciones lógicas
+    estado_logico = models.BooleanField(default=True) 
 
     class Meta:
         db_table = 'pelicula'
@@ -25,4 +25,5 @@ class PeliculaSalaCine(models.Model):
     fecha_fin = models.DateField()
 
     class Meta:
+
         db_table = 'pelicula_salacine'
