@@ -4,7 +4,7 @@ from .models import Pelicula
 
 def dashboard(request):
 
-    # CREAR
+
     if request.method == "POST" and "crear" in request.POST:
         nombre = request.POST.get("nombre")
         duracion = request.POST.get("duracion")
@@ -17,7 +17,7 @@ def dashboard(request):
 
         return redirect("/")
 
-    # EDITAR
+  
     if request.method == "POST" and "editar" in request.POST:
         id_p = request.POST.get("id_pelicula")
         nombre = request.POST.get("nombre")
@@ -31,7 +31,7 @@ def dashboard(request):
 
         return redirect("/")
 
-    # ELIMINAR (lógico)
+ 
     if request.method == "POST" and "eliminar" in request.POST:
         id_p = request.POST.get("id_pelicula")
 
@@ -46,4 +46,5 @@ def dashboard(request):
 
     return render(request, "api/dashboard.html", {
         "peliculas": peliculas
+
     })
