@@ -15,7 +15,7 @@ public class Pelicula {
     @Column(name = "estado_logico")
     private Boolean estadoLogico = true;
 
-    
+    // Getters y Setters
     public Integer getIdPelicula() { return idPelicula; }
     public void setIdPelicula(Integer idPelicula) { this.idPelicula = idPelicula; }
     public String getNombre() { return nombre; }
