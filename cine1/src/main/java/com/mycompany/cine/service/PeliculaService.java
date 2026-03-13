@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 public class PeliculaService {
     @Autowired private PeliculaRepository peliculaRepo;
     @Autowired private PeliculaSalaCineRepository peliculaSalaRepo;
-
+// Método utilitario para mapear la Entidad a un DTO de respuesta
     private PeliculaResponseDTO convertir(Pelicula p) {
         return new PeliculaResponseDTO(p.getIdPelicula(), p.getNombre(), p.getDuracion());
     }
@@ -37,7 +37,7 @@ public class PeliculaService {
         p.setDuracion(dto.getDuracion());
         return convertir(peliculaRepo.save(p));
     }
-
+// Ejecuta una eliminación suave (soft delete) cambiando el estado lógico a false
     public void eliminarLogico(Integer id) {
         Pelicula p = peliculaRepo.findById(id).orElseThrow(() -> new RuntimeException("Película no existe"));
         p.setEstadoLogico(false);
