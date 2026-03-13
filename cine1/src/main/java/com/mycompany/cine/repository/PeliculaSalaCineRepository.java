@@ -10,6 +10,6 @@ public interface PeliculaSalaCineRepository extends JpaRepository<PeliculaSalaCi
     
     @Query("SELECT p FROM PeliculaSalaCine p WHERE p.fechaPublicacion = :fecha")
     List<PeliculaSalaCine> findByFechaPublicacion(@Param("fecha") LocalDate fechaPublicacion);
-
+// Método para validar la regla de negocio de duplicidad en asignaciones
     boolean existsByPelicula_IdPeliculaAndSalaCine_IdSala(Integer idPelicula, Integer idSala);
 }
