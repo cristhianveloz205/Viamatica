@@ -6,12 +6,14 @@ import jakarta.persistence.*;
 public class SalaCine {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    // Se mapea explícitamente el nombre de la columna en BD para mantener el estándar camelCase en Java
     @Column(name = "id_sala")
     private Integer idSala;
     
     private String nombre;
     private Boolean estado = true;
 
+    // Getters y Setters
     public Integer getIdSala() { return idSala; }
     public void setIdSala(Integer idSala) { this.idSala = idSala; }
     public String getNombre() { return nombre; }
