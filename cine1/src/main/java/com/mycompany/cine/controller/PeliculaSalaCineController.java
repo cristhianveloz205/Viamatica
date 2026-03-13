@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/asignaciones")
 public class PeliculaSalaCineController {
     @Autowired private PeliculaSalaCineService service;
-
+    
+// Endpoint para asignar películas, aquí se dispara la validación de duplicados
     @PostMapping("/{idPelicula}/{idSala}")
     public ResponseEntity<PeliculaSalaCine> asignar(
             @PathVariable Integer idPelicula, 
