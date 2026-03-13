@@ -1,0 +1,169 @@
+{
+  "info": {
+    "_postman_id": "a03d7a9a-7023-48b9-94e5-fee7dc4b11b9",
+    "name": "Prueba Tecnica Viamatica",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52912784",
+    "_collection_link": "https://go.postman.co/collection/52912784-a03d7a9a-7023-48b9-94e5-fee7dc4b11b9?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "New Request",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nombre\": \"\",\r\n    \"duracion\": 148\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/peliculas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "peliculas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "2. Buscar por Nombre.",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/peliculas/buscar?nombre=Inception",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "peliculas",
+            "buscar"
+          ],
+          "query": [
+            {
+              "key": "nombre",
+              "value": "Inception"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "3. Buscar por Fecha",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/peliculas/por-fecha?fecha=2026-03-04",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "peliculas",
+            "por-fecha"
+          ],
+          "query": [
+            {
+              "key": "fecha",
+              "value": "2026-03-04"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "4. Validar Sala",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/salas/validar/Sala VIP",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "salas",
+            "validar",
+            "Sala VIP"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "json.pruebaviamatica",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/peliculas/sala/Sala VIP",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "peliculas",
+            "sala",
+            "Sala VIP"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"fechaPublicacion\": \"2026-03-15\",\r\n    \"fechaFin\": \"2026-03-30\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/asignaciones/1/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "asignaciones",
+            "1",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
