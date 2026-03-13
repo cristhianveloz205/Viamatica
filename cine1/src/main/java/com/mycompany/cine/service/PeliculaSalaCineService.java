@@ -15,6 +15,7 @@ public class PeliculaSalaCineService {
     @Autowired private SalaCineRepository salaRepo;
 
     public PeliculaSalaCine asignarPelicula(Integer idPelicula, Integer idSala, PeliculaSalaCine asignacion) {
+        // Validación de duplicados: Evita registrar la misma película en la misma sala
         if (asignacionRepo.existsByPelicula_IdPeliculaAndSalaCine_IdSala(idPelicula, idSala)) {
             throw new RuntimeException("Error: La película ya está en esta sala.");
         }
