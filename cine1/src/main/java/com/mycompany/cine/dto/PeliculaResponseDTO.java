@@ -1,5 +1,5 @@
 package com.mycompany.cine.dto;
-
+// DTO de salida: Evita exponer la entidad completa de la base de datos por seguridad
 public class PeliculaResponseDTO {
     private Integer idPelicula;
     private String nombre;
