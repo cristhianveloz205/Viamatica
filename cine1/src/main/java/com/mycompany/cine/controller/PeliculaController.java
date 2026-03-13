@@ -12,7 +12,8 @@ import java.util.List;
 @RequestMapping("/api/peliculas")
 public class PeliculaController {
     @Autowired private PeliculaService service;
-
+    
+// @Valid indica a Spring que ejecute las reglas de validación definidas en el DTO
     @PostMapping
     public ResponseEntity<PeliculaResponseDTO> crear(@Valid @RequestBody PeliculaRequestDTO dto) { 
         return ResponseEntity.ok(service.crear(dto)); 
