@@ -4,6 +4,7 @@ import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
+// DTO de entrada: Filtra y valida los datos que envía el cliente antes de procesarlos
 public class PeliculaRequestDTO {
     
     @NotBlank(message = "El nombre de la película es obligatorio")
